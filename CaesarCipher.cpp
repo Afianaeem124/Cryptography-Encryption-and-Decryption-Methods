@@ -2,6 +2,7 @@
 #include <map>
 #include <istream>
 #include <string>
+using namespace std;
 
 std::string encrypt(const std::string& plaintext) {
     std::map<char, int> charToIndex;
@@ -50,15 +51,15 @@ std::string decrypt(const std::string& ciphertext) {
 }
 
 int main() {
-    std::string input;
-    std::cout << "Enter text to encrypt: ";
+    string input;
+    cout << "Enter text to encrypt: ";
     std::getline(std::cin, input);
     //std::cin.ignore(); 
 
-    std::string encrypted = encrypt(input);
-    std::string decrypted = decrypt(encrypted);
+    string encrypted = encrypt(input);
+    string decrypted = decrypt(encrypted);
 
-    std::cout << "Encrypted: " << encrypted << std::endl;
+    cout << "Encrypted: " << encrypted << std::endl;
     std::cout << "Decrypted: " << decrypted << std::endl;
 
     return 0;
